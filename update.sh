@@ -32,13 +32,7 @@ do
     wget -O "$i.tar.gz" "${urls[$i]}"
     tar -xf "$i.tar.gz"
 
-    controlString='Package: ${packageName}
-    Version: ${version:1}
-    Architecture: ${architecture}
-    Maintainer: ${maintainer} <${maintainerEmail}>
-    Description: ${descriptionShort}
-     ${descriptionLong}
-    '
+    controlString=$"Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
     dirname="${packageName}_${version:1}-1_${i}"
 
     mkdir -p $dirname/usr/local/bin
