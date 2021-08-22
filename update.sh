@@ -10,8 +10,8 @@ maintainer="Carl Schader"
 descriptionShort="Application secrets manager."
 descriptionLong="The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables."
 
-git fetch --all 
-git pull origin main
+git fetch origin
+git reset --hard origin/main
 
 rm -rf *.deb
 
