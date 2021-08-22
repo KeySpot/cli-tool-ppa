@@ -1,0 +1,1 @@
+Package: ${packageName} Version: ${version:1} Architecture: ${architecture} Maintainer: ${maintainer} <${maintainerEmail}> Description: ${descriptionShort} ${descriptionLong}

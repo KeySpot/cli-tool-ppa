@@ -49,9 +49,9 @@ do
 
     echo $controlString > $dirname/DEBIAN/control
 
-    dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
+    # dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
 
-    rm -rf "$i.tar.gz" $dirname
+    rm -rf "$i.tar.gz"
 done
 
 dpkg-scanpackages --multiversion . > Packages
