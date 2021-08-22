@@ -66,4 +66,4 @@ git remote add origin https://$GITHUB_TOKEN@github.com/keyspot/cli-tool-ppa.git
 
 git add .
 git commit -m $version
-git push origin main
+git push https://$GITHUB_TOKEN@github.com/keyspot/cli-tool-ppa.git

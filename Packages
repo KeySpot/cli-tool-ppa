@@ -1,12 +1,36 @@
 Package: keyspot
 Version: 1.0.15
-Architecture: 0
+Architecture: i386
 Maintainer: Carl Schader <>
-Filename: ./keyspot_1.0.15-1_0.deb
-Size: 860
-MD5sum: db9fc42bb522d0f8325c6213ed9a48af
-SHA1: dc7841dbf0943b0392c8e78e6064406edfda5eba
-SHA256: f56c0f59c1ddeae791855c0f8f557bd02a3399b8a8d3cf09fb8453f32045b002
+Filename: ./keyspot_1.0.15-1_i386.deb
+Size: 1676380
+MD5sum: bcb8b05dbf178b5d991cbee9b7ff331f
+SHA1: bd348db3f717374254c6290cd6f04e72f2e0c6d3
+SHA256: 0ccd94f80a7406afe76ebefc2c1cf8343cca33bb82f6f2c63f6de27069c4afb9
+Description: Application secrets manager.
+ The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
+
+Package: keyspot
+Version: 1.0.15
+Architecture: arm64
+Maintainer: Carl Schader <>
+Filename: ./keyspot_1.0.15-1_arm64.deb
+Size: 1507004
+MD5sum: 59b9002d64d19107c2bb4a4e4764207e
+SHA1: 3f84008fd1e6f2a079d7526b6c2f4c15ffbb9b47
+SHA256: dd96c5009f3e1331057501f970893a69dc25ed221bdb5b8ce35940033367df06
+Description: Application secrets manager.
+ The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
+
+Package: keyspot
+Version: 1.0.15
+Architecture: amd64
+Maintainer: Carl Schader <>
+Filename: ./keyspot_1.0.15-1_amd64.deb
+Size: 1734224
+MD5sum: 1969cb90002e2286ed34ecd70c1e34ca
+SHA1: d7c38d1f99a42938f88161f72324afc5f2a7ed9d
+SHA256: 9b72f586eb92c75125de9361155bf081e563d136894a0b91c98157a193d8259e
 Description: Application secrets manager.
  The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
 
