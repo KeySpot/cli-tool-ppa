@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# Requires goreleaser and dpkg
+# dpkg, apt-utils, gpg 
 
 from getVersion import getVersion
 from makeDeb import makeDeb
