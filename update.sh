@@ -21,6 +21,8 @@ version=$(git describe --tags --abbrev=0)
 cd ../
 rm -rf $repoDir
 
+gpg --import private-key.asc
+
 declare -A urls
 
 urls["arm64"]="https://github.com/KeySpot/cli-tool/releases/download/${version}/cli-tool_${version:1}_Linux_arm64.tar.gz"
