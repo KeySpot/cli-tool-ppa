@@ -32,7 +32,7 @@ do
     wget -O "$i.tar.gz" "${urls[$i]}"
     tar -xf "$i.tar.gz"
 
-    controlString=$"Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
+    controlString="Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
     dirname="${packageName}_${version:1}-1_${i}"
 
     mkdir -p $dirname/usr/local/bin
@@ -41,7 +41,7 @@ do
     mv cli-tool $dirname/usr/local/bin/keyspot
     chmod 555 $dirname/usr/local/bin/keyspot
 
-    echo $controlString > $dirname/DEBIAN/control
+    echo -e $controlString > $dirname/DEBIAN/control
 
     # dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
 
