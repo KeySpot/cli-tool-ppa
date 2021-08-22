@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# requires git, dpkg, apt-utls, gpg
+# requires git, wget, dpkg, apt-utls, gpg
 
 email="carlschader@gmail.com"
 repoUrl="https://github.com/keyspot/cli-tool.git"
@@ -52,8 +52,8 @@ dpkg-scanpackages --multiversion . > Packages
 gzip -k -f Packages
 
 apt-ftparchive release . > Release
-gpg --default-key $email -abs -o - Release > Release.gpg
-gpg --default-key $email --clearsign -o - Release > InRelease
+echo RedGreenBlue@1 | gpg --default-key $email -abs -o - Release > Release.gpg
+echo RedGreenBlue@1 | gpg --default-key $email --clearsign -o - Release > InRelease
 
 git add .
 git commit -m $version
