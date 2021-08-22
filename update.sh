@@ -32,7 +32,7 @@ do
     wget -O "$i.tar.gz" "${urls[$i]}"
     tar -xf "$i.tar.gz"
 
-    controlString="Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
+    controlString=$"Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
     dirname="${packageName}_${version:1}-1_${i}"
 
     mkdir -p $dirname/usr/local/bin
@@ -43,10 +43,9 @@ do
 
     echo $controlString > $dirname/DEBIAN/control
 
-    # dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
+    dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
 
-    # rm -rf "$i.tar.gz" $dirname
-    rm -rf "$i.tar.gz"
+    rm -rf "$i.tar.gz" $dirname
 done
 
 dpkg-scanpackages --multiversion . > Packages
