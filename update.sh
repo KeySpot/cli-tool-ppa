@@ -10,6 +10,9 @@ maintainer="Carl Schader"
 descriptionShort="Application secrets manager."
 descriptionLong="The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables."
 
+git fetch --all 
+git pull origin main
+
 rm -rf *.deb
 
 git clone $repoUrl
@@ -57,9 +60,9 @@ apt-ftparchive release . > Release
 echo RedGreenBlue@1 | gpg --passphrase-fd 0 --default-key $email -abs -o - Release > Release.gpg
 echo RedGreenBlue@1 | gpg --passphrase-fd 0 --default-key $email --clearsign -o - Release > InRelease
 
-git config --global user.email "$GITHUB_EMAIL"
-git config --global user.name "$GITHUB_USERNAME"
-git remote add origin https://$GITHUB_USERNAME:$GITHUB_PASSWORD@github.com/keyspot/cli-tool-ppa.git
+git config --global user.email "carlschader@gmail.com"
+git config --global user.name "carlschader"
+git remote add origin https://$GITHUB_TOKEN@github.com/keyspot/cli-tool-ppa.git
 
 git add .
 git commit -m $version
