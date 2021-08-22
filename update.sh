@@ -52,8 +52,8 @@ dpkg-scanpackages --multiversion . > Packages
 gzip -k -f Packages
 
 apt-ftparchive release . > Release
-gpg --passphrase RedGreenBlue@1 --default-key $email -abs -o - Release > Release.gpg
-gpg --passphrase RedGreenBlue@1 --default-key $email --clearsign -o - Release > InRelease
+echo RedGreenBlue@1 | gpg --batch --yes --passphrase-fd 0 --default-key $email -abs -o - Release > Release.gpg
+echo RedGreenBlue@1 | gpg --batch --yes --passphrase-fd 0 --default-key $email --clearsign -o - Release > InRelease
 
 git add .
 git commit -m $version
