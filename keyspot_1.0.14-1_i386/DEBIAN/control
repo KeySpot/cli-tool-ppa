@@ -1,7 +1,0 @@
-Package: keyspot
-Version: 1.0.14
-Architecture: 
-Maintainer: Carl Schader <>
-Description: Application secrets manager.
- The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
-
