@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# requires git
+# requires git, dpkg, apt-utls, gpg
 
 #!/usr/bin/python3
 
@@ -64,6 +64,10 @@
 email="carlschader@gmail.com"
 repoUrl="https://github.com/keyspot/cli-tool.git"
 repoDir="cli-tool/"
+packageName="keyspot"
+maintainer="Carl Schader"
+descriptionShort="Application secrets manager."
+descriptionLong="The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables."
 
 rm -rf *.deb
 
@@ -87,15 +91,28 @@ do
     wget -O "$i.tar.gz" "${urls[$i]}"
     tar -xf "$i.tar.gz"
 
-    rm -rf "$i.tar.gz" "cli-tool"
+    controlString="Package: ${packageName}\nVersion: ${version:1}\nArchitecture: ${architecture}\nMaintainer: ${maintainer} <${maintainerEmail}>\nDescription: ${descriptionShort}\n ${descriptionLong}\n"
+    dirname="${packageName}_${version:1}-1_${i}"
+
+    mkdir -p $dirname/usr/local/bin
+    mkdir $dirname/DEBIAN
+    
+    mv keyspot $dirname/usr/local/bin/keyspot
+    chmod 555 $dirname/usr/local/bin/keyspot
+
+    echo $controlString > $dirname/DEBIAN/control
+
+    # dpkg-deb --build --root-owner-group ${packageName}_${version:1}-1_${i}
+
+    rm -rf "$i.tar.gz"
 done
 
 dpkg-scanpackages --multiversion . > Packages
 gzip -k -f Packages
 
 apt-ftparchive release . > Release
-gpg --default-key carlschader@gmail.com -abs -o - Release > Release.gpg
-gpg --default-key carlschader@gmail.com --clearsign -o - Release > InRelease
+gpg --default-key $email -abs -o - Release > Release.gpg
+gpg --default-key $email --clearsign -o - Release > InRelease
 
 git add .
 git commit -m $version
