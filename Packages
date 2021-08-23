@@ -1,36 +1,36 @@
 Package: keyspot
-Version: 1.0.23
+Version: 1.0.25
 Architecture: arm64
 Maintainer: Carl Schader <>
-Filename: ./keyspot_1.0.23-1_arm64.deb
-Size: 1508388
-MD5sum: a7383589341bdb4e1418ef755baca6ce
-SHA1: 05eedfc7822e091c14a19434841ac148c26d5797
-SHA256: c28bbc8a5b904e17c09d252b249fb63f1e48715a62b9efb9d036dc5cd63b7ef1
+Filename: ./keyspot_1.0.25-1_arm64.deb
+Size: 1507544
+MD5sum: 44a02775c824a79972e3a1c54bdbd61a
+SHA1: cbdf6ded2468683d684672161bd3afc4dd9e47a9
+SHA256: 7821f0d98a6eb634c9c3f5fd2e9092260dc5a3c159e31eee8b0f9c92bb5348dc
 Description: Application secrets manager.
  The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
 
 Package: keyspot
-Version: 1.0.23
+Version: 1.0.25
 Architecture: i386
 Maintainer: Carl Schader <>
-Filename: ./keyspot_1.0.23-1_i386.deb
-Size: 1676588
-MD5sum: 947ee60441decdb57a1b3606ae1f9f36
-SHA1: e8e1f2b893c00ae260b1e2db51f2e9689b0b4592
-SHA256: 4c1a959fd54f1c5c989e60e6ab41d91249d59a1a9ea34357e1f6331bea7c734f
+Filename: ./keyspot_1.0.25-1_i386.deb
+Size: 1676792
+MD5sum: 21013639143ef0f1146e2cc3327781fc
+SHA1: d62e0c9b78bf717ff2cbda684bfb0f27d07e23bd
+SHA256: 4d944a4b6dd63584c4569803f4e0f78bfb161a4e413f3321bd6dec37a400cfb4
 Description: Application secrets manager.
  The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
 
 Package: keyspot
-Version: 1.0.23
+Version: 1.0.25
 Architecture: amd64
 Maintainer: Carl Schader <>
-Filename: ./keyspot_1.0.23-1_amd64.deb
-Size: 1734748
-MD5sum: 04153fe71286e518bc58d573cc7f827d
-SHA1: bb32214f5444f96ebc91274e6fd27b5206930103
-SHA256: 04bd1163a40502b187b9ff4371970ba3d7cb30cee94aa1adfdf9346ec03b71ff
+Filename: ./keyspot_1.0.25-1_amd64.deb
+Size: 1735108
+MD5sum: 1cf63b45550cc1cf13344f9af31bb80f
+SHA1: 7bd8f4662d53668286de63dea54b5c1a13a31613
+SHA256: 5c88c98b860b506ef5f413974ee1011d27051a12540099a0633229b1c182435a
 Description: Application secrets manager.
  The keyspot CLI tool offers an interface for accessing the KeySpot(https://keyspot.app) web app through the terminal. One of the primary functions of the keyspot CLI tool is the injection of application secrets into a program or command as environment variables.
 
