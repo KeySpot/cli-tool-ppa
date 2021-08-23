@@ -3,8 +3,6 @@
 # requires git, wget, dpkg, apt-utls, gpg
 
 email="carlschader@gmail.com"
-repoUrl="https://github.com/keyspot/cli-tool.git"
-repoDir="cli-tool/"
 packageName="keyspot"
 maintainer="Carl Schader"
 descriptionShort="Application secrets manager."
@@ -12,14 +10,7 @@ descriptionLong="The keyspot CLI tool offers an interface for accessing the KeyS
 
 rm -rf *.deb
 
-git clone $repoUrl
-cd $repoDir
-git fetch --all --tags
-
-version=$(git describe --tags --abbrev=0)
-
-cd ../
-rm -rf $repoDir
+version=$(git ls-remote --tags https://github.com/keyspot/cli-tool.git | tail -n 1 | sed 's/.*refs\/tags\///g')
 
 gpg --import private-key.asc
 
