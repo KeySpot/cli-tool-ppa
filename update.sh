@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# requires git, wget, dpkg, apt-utls, gpg
+# requires git, wget, dpkg, apt-utls, gnupg
 
 email="carlschader@gmail.com"
 packageName="keyspot"
