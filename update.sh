@@ -48,9 +48,9 @@ apt-ftparchive release . > Release
 echo RedGreenBlue@1 | gpg --passphrase-fd 0 --default-key $email -abs -o - Release > Release.gpg
 echo RedGreenBlue@1 | gpg --passphrase-fd 0 --default-key $email --clearsign -o - Release > InRelease
 
-git config --global user.email "carlschader@gmail.com"
-git config --global user.name "carlschader"
-git remote add origin https://$GITHUB_TOKEN@github.com/keyspot/cli-tool-ppa.git
+# git config --global user.email "carlschader@gmail.com"
+# git config --global user.name "carlschader"
+# git remote add origin https://$GITHUB_TOKEN@github.com/keyspot/cli-tool-ppa.git
 
 git add .
 git commit -m $version
